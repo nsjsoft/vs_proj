@@ -1,0 +1,40 @@
+body {
+    height : 100vh;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.yellowgreen {
+    background-color : yellowgreen;
+    width : 800px;
+    height: 400px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.royalblue {
+    background-color : royalblue;
+    width : 600px;
+    height: 300px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.crimson {
+    background-color : crimson;
+    width : 400px;
+    height: 150px;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.gray {
+    background-color : gray;
+    width : 100px;
+    height: 100px;
+    margin : 5px;
+}

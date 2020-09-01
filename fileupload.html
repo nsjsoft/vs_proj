@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      
+    <script defer>       
+        window.onload = function() {
+/*
+            const inpFile = document.getElementById("inpFile");
+
+            if(inpFile == null) {
+                alert('ggggggggggggg');
+                return;
+            }                
+
+            console.log(Object.keys(inpFile));
+*/
+            const input = document.querySelector('input[type="file"]');
+            input.addEventListener('change', function(e) {
+
+                /*
+                const reader = new FileReader();
+                for(var key2 in reader) {
+                    console.log(key2);
+
+                }
+                */
+                /*
+                reader.onload = function() {
+                    console.log(reader.result);
+                }
+                reader.readAsText
+                var file;
+                var fileKey;
+                fileKey = Object.keys(input.files);
+                fileValue = Object.values(input.files);
+                console.log(fileKey);
+                console.log(fileValue);
+                */
+                for(var key in input) {
+                    //if (key == "files")
+                    console.log(key + '=> ' + input[key]);
+                }                
+            }, false);
+        }       
+    </script>
+    
+</head>
+<body>
+    <input type="file" id="inpFile" multiple >      
+</body>
+</html>

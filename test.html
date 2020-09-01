@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" href="css/test.css">-->
+    <title>TEST용</title>    
+    <!-- <script  src="http://code.jquery.com/jquery-latest.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .btn {
+            width:100px;
+            height:40px;
+            line-height: 40px;
+            background-color: deeppink;
+            color:#fff;
+            text-align: center;
+            cursor:pointer;
+        }
+    </style>
+   
+</head>
+<div>
+    <!--
+    <div class="box">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil dolores voluptatem dolorum ipsa, quibusdam et modi adipisci iure odio quo accusantium fugiat aliquam! Aperiam reprehenderit cum id libero nobis eaque.</p>
+    </div>
+    
+
+    <div class="box2">
+        <img src="images/2.jpg">
+    </div>
+    
+    <table border="1">
+        <tr>
+            <td>wow1</td>
+            <td>wow2</td>
+            <td>wow3</td>
+            <td>wow3</td>
+        </tr>
+    </table>
+ 
+    <div class="cover">
+        <div class="cover-inner">
+            <div class="box">wow</div>
+        </div>
+    </div>
+   -->
+
+   <script type="text/javascript">
+    $('.welcome').html('hello world coding everybody!').css('background-color', 'yellow');
+    //$('body').html('Hello NSJSoft World!!!');
+   </script>
+    <div class="welcome">aaa</div>
+    <div class="btn">aaa</div>
+    
+    <!--
+    <img src="images/1.png">
+    <img src="images/3.svg">
+    -->
+    <div id="menu" style="border:10px solid red;margin:100px">
+        <button class="menu-btn" data-value="1"><img style="width:50px;height:50px;" src="images/1.png"></button>
+        <button class="menu-btn" data-value="2"><img style="width:50px;height:50px;" src="images/2.jpg"></button>
+        <button class="menu-btn" data-value="3"><img style="width:50px;height:50px;" src="images/3.svg"></buttonclass="menu-btn">
+    </div>
+    <style>
+        .btn-label {
+            text-shadow:rgba(255, 255, 255, 1) 0 1px 0;
+            pointer-events: none;
+        }        
+    </style>
+    <script>
+
+        function clickHandler(event) {
+            let elem = event.target;
+            while(!elem.classList.contains('menu-btn')){
+                elem = elem.parentNode;
+                if (elem.nodeName == 'BODY') {
+                    elem = null;
+                    return;
+                }
+            }
+            console.log(elem.dataset.value);
+            console.log(event.target.getAttribute('data-value'));
+            console.log(event.target.dataset.value);
+
+        }
+
+        const menu=document.querySelector('#menu');
+/*
+        for(let i=0;i<btns.length;i++) {
+            btns[i].addEventListener('click', clickBtnHandler);
+        }
+*/        
+        menu.addEventListener('click', clickHandler);
+        window.addEventListener('click', () => {
+            const htmlStr=``;
+
+            memu.innerHTML = htmlStr;
+
+        })
+
+    </script>
+</body>
+</html>

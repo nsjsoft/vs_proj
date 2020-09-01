@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style type="text/css">
+        div {
+            margin:3px;
+            width:80px;
+            height:80px;
+            background: #f00;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" id="slidedown" value="slide down">
+    <div id="target">
+        target
+    </div>
+    <button id="go">
+        &raquo;Run        
+    </button>
+    <div id="block">
+        Hello!
+    </div>
+    <script>
+        
+        $('input[type="button"').click(function(e) {
+            
+            //var $this=$(e.target);
+
+            switch($(this).attr('id')) {
+                case 'slidedown' :
+                    
+                    $('#target').hide().slideDown('slow');
+                    break;
+                default :
+                    break;
+            }
+        })
+
+        $("#go").click(function() {
+            $("#block").animate({
+                width:"300px",
+                opacity:0.4,
+                marginLeft:"50px",
+                fontSize:"30px",
+                borderWidth:"10px"
+            }, 3000);
+            })
+
+    </script>
+</body>
+</html>

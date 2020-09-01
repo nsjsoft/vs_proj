@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(function(){
+            $('#commentbtn').on('click', function() {
+                var grpl = $("input[name=groundod]").length;
+                var grparr = new Array(grpl);
+
+                for(var i=0;i<grpl;i++)
+                {
+                    grparr[i] = $("input[name=groundod]").eq(i).val();
+
+                    console.log(grparr[i]);
+                }
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <input type="hidden" name="groundod" value="1">
+    <input type="hidden" name="groundod" value="2">
+    <input type="hidden" name="groundod" value="3">
+
+    <input type="button" id="commentbtn" value="배열만들기"/>
+    <form name="Aform">
+        <input type="text" name="abc[]" value="a"/>
+        <input type="text" name="abc[]" value="b"/>
+        <input type="text" name="abc[]" value="c"/>
+</form>
+ 
+
+<script type="text/javascript">
+    var aaa = document.getElementsByName("abc[]")[0].value; //javascritp getElementsByName 사용 시
+    var bbb = document.Aform["abc[]"][1].value; //javascript form 으로 접근
+    var ccc = $('input[name="abc[]"]')[2].value; //jquery name으로 접근
+</script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Node(element) {
+            this.element = element;
+            this.next = null;
+        }
+
+        function LinkedList() {
+            this.head = new Node("head");
+            this.find = find;
+            this.append = append;
+            this.insert = insert;
+            this.remove = remove;
+            this.toString = toString;
+            this.findPrevious = findPrevious;
+        }       
+
+        function find(item) {
+            var currNode = this.head;
+            while(currNode.element != item) {
+                currNode = currNode.next;
+            }
+
+            return currNode;
+        }
+
+        function append(newElement) {
+            var newNode = new Node(newElement);
+            var current = this.head;
+            while(current.next != null) {
+                current = current.next;
+            }
+
+            current.next = newNode;
+        }       
+
+        function findPrevious(item) {
+            var currNode = this.head;            
+            while(currNode.next != null && currNode.next.element != item) {                
+                currNode = currNode.next;
+            }
+            
+            return currNode;
+        }
+
+        function insert(newElement, item) {
+
+            var newNode = new Node(newElement);
+            var current = this.find(item);
+
+            newNode.next = current.next;
+            current.next = newNode;
+
+        }
+
+        // 노드 삭제
+        function remove(item) {
+            var preNode = this.findPrevious(item); // 삭제할 노드를 가리키는 노드 찾기
+            console.log(preNode);
+            console.log(preNode.next.next);
+            preNode.next = preNode.next.next; // 삭제할 노드 다음 노드를 가리키도록 하기
+        }
+
+        function toString() {
+
+            var str = '[ ';
+            var currNode = this.head;
+            while(currNode.next != null) {
+                str += currNode.next.element + ' ';
+                currNode = currNode.next;
+            }
+
+            return str + ']';
+        }
+
+        var linkedList = new LinkedList();
+        linkedList.insert('A', 'head');
+        //console.log(linkedList.find('head'));
+        linkedList.append('Node1');
+        linkedList.remove('Node1');
+        console.log(linkedList.toString());
+        
+        //console.log(linkedList);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

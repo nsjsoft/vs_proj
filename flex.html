@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { padding:30px;}
+        * {padding:0; margin:0; list-style:none;}
+        ol, ul {border:1px solid red;padding:20px;}        
+        li {flex:1;border:1px solid blue;}
+        /* ul:after{content:"";display:block;clear:both;} */
+        .flex{display:flex;}
+        .flex li{flex:1;}
+        .flex li:nth-child(1){flex:3;}
+        .flex li:nth-child(2){flex:none;width:200px;}
+        .table{display:table;width:100%;border-collapse: collapse;border-spacing:0;}
+        .table li {display:table-cell;}
+        div {display:flex;
+             /* justify-content:center; */
+             justify-content:flex-end;
+             align-items:center;
+             flex-direction:row;
+             height:300px;
+             border:1px solid pink;}
+        p {width:200px;height:50px;border:1px solid purple;}
+    </style>
+</head>
+<body>
+    Flex Layout
+    <ul class="flex">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    Table layout
+    <ol class="table">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol> 
+    <br>
+    <br>
+    <br> 
+    Flex 속성테스트
+
+    <div>
+        <p>text</p>
+        <p>text</p>
+        <p>text</p>
+    </div>
+
+
+</body>
+</html>
