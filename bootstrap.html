@@ -5,18 +5,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Latest compiled JavaScript -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+    
+    <link rel="stylesheet" href="css/nsj.css">
+
+    <script src="js/bootstrap.js"></script>
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
 </head>
 <body>
+    
+    <style type="text/css">
+        .jumbotron {
+            text-shadow: black 0.2em 0.2em 0.2em;
+            color:white;
+            background-image: url("images/2.jpg");
+            background-size: cover;
+        }
+
+        blockquote {
+            background: #f9f9f9;
+            border-left: 10px soldi #cccccc;
+            margin: 1.5em 10px;
+            padding: 0.5em 10px;
+            quotes: "\201C""\201D""\2018""\2019"
+        }
+
+        blockquote:before {
+            color: #cccccc;
+            content: open-quote;
+            font-size: 3em;
+            line-height: 0.1em;
+            margin-left: 0.25em;
+            vertical-align: -0.4em;
+        }
+
+        blockquote:after {
+            color: #cccccc;
+            content: close-quote;
+            font-size: 3em;
+            line-height: 0.1em;
+            margin-left: 0.25em;
+            vertical-align: -0.4em;
+        }
+    </style>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only"></span>
+                <span class="icon-bar"></span>
+            </button>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
-        <h1>My First Bootstrap Page</h1>
-        <p>This is some text.</p>
+        <div class="jumbotron">
+            <h1 class="text-center">My First Bootstrap Page</h1>
+            <p class="text-center">This is some text.</p>
+            <p class="text-center"><a class="btn btn-primary btn-lg" href="#" role="button">NSJSoft</a></p>
+        </div>
     </div>    
+    
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title"><span class="glyphicon glypicon-pencil"></span>
+            &nbsp;&nbsp;최신 강의 목록</h3>
+        </div>
+        <div class="panel-body">
+            <div class="media">
+                <div class="media-left">
+                    <a href="#"><img class="media-object" src="images/5.jpg" alt=""></a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading"><a href="#">aaa</a>&nbsp;<span class="badge">New</span></h4>
+                    NSJSoft NSJ
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <ul class="list-group">
+                <a href="#" class="list-group-item active">1</a>
+                <a href="#" class="list-group-item">2</a>
+                <a href="#" class="list-group-item">3</a>
+                <a href="#" class="list-group-item">4</a>
+                <a href="#" class="list-group-item">5</a>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/q4tfF3UGaQg"></iframe>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <p>
+                소프트웨어분야에 대표 개발자이십니다.
+            </p>
+            <pre class="pre-scrollable">
+                #include &lt;stdio.h&gtreqless;
+                
+                int main(void)
+                {
+                    printf("Hello World!");
+                }       
+            </pre>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <span class="glyphicon glyphicon-tags"></span>
+                            &nbsp;&nbsp;나상진 대표
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#"><img src="images/nsj.jpg" alt="개발자 이미지" class="media-object"></a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">나상진</h4>
+                                소프트웨어분야에 대표 개발자이십니다.
+                            </div>
+                        </div>                        
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>직책</th>
+                                    <th>직책번호</th>
+                                    <th>이름</th>
+                                    <th>날짜</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <td>대표</td>
+                                <td>1</td>
+                                <td>나상진</td>
+                                <td>2020.09.12</td>
+                            </tbody>
+                        </table>
+                        <div class="panel-footer">
+                            <blockquote>&nbsp;&nbsp;Do And Forget!</blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>
