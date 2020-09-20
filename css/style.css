@@ -1,8 +1,9 @@
 body {
-    height : 100vh;
+    /* height : 100vh;
     display:flex;
     justify-content: center;
-    align-items:center;
+    align-items:center; */
+    /* font-size:2em; */
 }
 
 .yellowgreen {
@@ -38,3 +39,15 @@ body {
     height: 100px;
     margin : 5px;
 }
+/* 
+div {
+    background-color:red;
+}
+
+span {
+    background-color:blue;
+} */
+
+.agree { position: relative;margin:28px 0 0;padding:0 30px;height:60px;border:1px solid #e8e8e8;line-height: 60px;}
+.agree label span {color:#de4f41;}
+.agree a.view {position: absolute;right:30px;top:15px;width:93px;height:30px;border:1px solid #ddd;text-align: center;line-height: 30px;border-radius:3px;}
