@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <style>
+        
+        .container {
+            position: relative;
+            left:0;
+            top:10;
+
+        }
+        .container p {
+            display:block;
+            width:100%;
+            height:500px;
+            font-size:50px;
+            line-height:10em;           
+            overflow:auto;
+            border:1px solid red;
+        }
+
+        a.btn-top {
+            color:#000;
+            width:30px;
+            height:30px;
+            display:block;
+            border : 1px solid lightgra;
+            text-align:center;
+            line-height:45px;
+            border-radius:50%;
+            font-size:30px;
+            position:fixed;
+            right:20px;
+            bottom:20px;
+            z-index:1;
+        }
+       
+
+    * {
+        margin:0;
+    }
+
+/*
+    div {
+        width:200px;
+        height:200px;
+        background-color :dodgerblue;
+        color:#fff;
+        text-align: center;
+        line-height:50px;
+        border:2px solid red;
+
+    }    
+*/
+
+    .box1 {
+        position:absolute;
+        left:0;
+        top:0;
+    }
+
+    .box2 {
+        position:absolute;
+        left:0;
+        bottom:0;
+    }
+
+    .box3 {
+        position:absolute;
+        right:0;
+        top:0;
+    }
+
+    .box4 {
+        position:absolute;
+        right:0;
+        bottom:0;
+    }
+
+    .box5 {
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        bottom:0;
+    }
+    </style>
+</head>
+
+<body> 
+    <div class="container">
+        <h1>Position: fixed;</h1>
+        <p>
+            폰트 어썸을 사용하는 방법은 두가지가 있습니다. 첫번째 방법은 CDN을 삽입하고 아이콘을 특정 클래스 명으로 호출해 사용하는 방법입니다. 두번째 방법은 직접 원하는 아이콘을 다운받아 활용하는 방식이 있는데 대부분 CDN방식을 많이 사용합니다
+        </p>
+    </div>   
+
+    <div style="position:relative;border:1px solid blue;width:100%;height:300px;">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+        <div class="box4">4</div>
+        <div class="box5">5</div>
+    </div>
+
+    <a class="btn-top" href="#"><i class="fas fa-arrow-up"></i></a>
+
+</body>
+</html>
