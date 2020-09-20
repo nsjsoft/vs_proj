@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    
+</head>
+<body>
+    <!-- <p>hat<p>
+    <ul id="list">        
+    </ul>
+    <p id="cool">shoes</p> -->
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+/*
+         $(function(){
+            $('<li>jacket</li>').prependTo('#list');
+            $('<li>pants</li>').appendTo('#list');
+            $('<p>hat</p>').insertBefore('#list');
+            $('<p>shoes</p>').insertAfter('#list');
+         });
+*/         
+/*
+         $(function(){
+            $('#list').before('<p>hat</p>');
+            $('#list').after('<p>shoes</p>');
+            $('#list').prepend('<li>jacket</li>');
+            $('#list').append('<li>pants</li>');
+        });
+*/        
+        /*
+        $(function(){
+            $('#cool').insertBefore('#list');
+        });
+        */
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("p").hide("slow", function() {
+                    alert("The paragraph is now hidden")
+                });
+            });
+
+            $('body > *').css('color', 'red');
+
+            document.getElementById('btnTest').disabled = false;
+
+            // $( "#check1" ).change(function() {
+            //     var $input = $( this );
+            //     $( "#p_id" ).html(
+            //         ".attr( \"checked\" ): <b>" + $input.attr( "checked" ) + "</b><br>" +
+            //         ".prop( \"checked\" ): <b>" + $input.prop( "checked" ) + "</b><br>" +
+            //         ".is( \":checked\" ): <b>" + $input.is( ":checked" ) + "</b>" );
+            //     }).change();
+
+             //var a = document.getElementById('p_id');
+            var a = document.getElementById('p_id');
+            console.log(a);
+            a.style.display = 'block';
+            //var b = document.getElementById('p_id').style.visibility = 'hidden';
+        });
+
+        function agree() {
+            var chkbox = document.getElementsByName('chk_info');
+            var chk = false;
+
+            for(var i=0;i<chkbox.length;i++) {
+                // if(chkbox[i].checked) {
+                //     chk = true;
+                // }
+                // else {
+                //     chk = false;
+                // }
+
+                chkbox[i].checked = true;
+                console.log(chkbox[i].value);
+                chkbox[i].disabled = true;
+                if($(chkbox[i]).prop("disabled", true))
+                    alert('true')
+                else
+                    alert('false')    
+                //console.dir(typeof tmp);
+                //console.log(JSON.stringify(tmp));
+                //$(chkbox[i]).attr("disabled", true);
+            }           
+            
+            // if(chk) {
+            //     alert("모든 약관에 동의함.");
+            //     return false;
+            // } else {
+            //     alert("모든 약관에 동의해 주세요.");
+            // }
+
+           //document.getElementById(p_id)[0].display='block';
+        }
+
+       
+
+    </script>    
+    <!-- <button id="btnTest">버튼</button><br><br><br>
+    <p id="p_id">문단</p>
+    <input type="checkbox" name="chk_info" value="HTML">HTML
+    <input type="checkbox" name="chk_info" value="CSS" checked>CSS
+    <input type="checkbox" name="chk_info" value="웹디자인">웹디자인
+    <a href="javascript:agree();">동의</a>
+    <a href="#">동의안함</a>
+    <input id="check1" type="checkbox" checked="checked">
+    <label for="check1">Check me</label> -->
+
+    <div> 
+        <ul> 
+            <li>Dog</li> 
+            <li>Cat</li> 
+            <li>Pig</li> 
+        </ul> 
+    </div>
+
+</body>
+</html>

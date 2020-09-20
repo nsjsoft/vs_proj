@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding:20px;
+        }
+
+        .sel1:after { content:url(images/left.png);}
+        .sel1:before { content:"1";}
+    </style>
+</head>
+<body>
+    <div class="sel1">text</div>
+
+    <style>
+        .sel2 li:first-child {border:1px solid red;}
+        .sel2 li:last-child {border:1px solid red;}
+        .sel2 li:nth-child(2) {color:violet;}
+
+        .sel2 li:nth-last-child(2) {color:violet;}
+
+        .sel3 ul:first-of-type { border:1px solid pink;}
+        .sel3 ul:last-of-type { border:1px solid pink;} */
+        .sel3 ul:nth-of-type(2) { border:1px solid red;}
+
+    </style>
+    <ul id="sel2" class="sel2">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+
+    <div class="sel3">
+        <span>1</span>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+        <p>5</p>
+        <div>6</div>
+        <ul>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+        </ul>
+    </div>
+</body>
+</html>
