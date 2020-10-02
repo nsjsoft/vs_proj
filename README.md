@@ -14,3 +14,5 @@ get config --global --editcore.quotepath=false
 cherry pick
 
 한번더 cherry pick
+버그수정
+다른 브랜치 감
