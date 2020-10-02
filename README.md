@@ -8,3 +8,5 @@ git push -u origin master는 입력된 origin master를 기억하여
 set LC_ALL=ko_KR.UTF-8 한글깨질때
 
 get config --global --editcore.quotepath=false
+
+실수실수
