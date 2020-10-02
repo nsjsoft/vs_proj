@@ -1,10 +1,2 @@
-# vs_proj
-vs_proj
-
-commit from github directly.
-
-edit from local repo.
-
-so what?
-
-edit from github.
+# git 정리
+git commit -am : add & commit
