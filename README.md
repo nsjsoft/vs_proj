@@ -10,7 +10,4 @@ set LC_ALL=ko_KR.UTF-8 한글깨질때
 get config --global --editcore.quotepath=false
 
 개발
-
 버그수정
-
-cherry pick
