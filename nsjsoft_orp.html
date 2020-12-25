@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="es6.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $("tr").click(function(event) {
+                if (event.target.type == 'checkbox')
+                    return;
+                
+                // TODO tr 눌렀을 때 취할 행동. 물론 실무에선 selecter 를 더 한정적으로 써야함
+            });
+            
+            $(":checkbox").change(function(event) {
+                // TODO checkbox 눌렀을 때 취할 행동
+            });
+
+            $("tr").click(function(event) {
+
+            });
+            
+            $(":checkbox").click(function(event) {
+                event.stopPropagation();
+            });
+
+            $('#TableID').delegate('tr', 'click', function (event) {
+                    if($(event.target).is('input:checkbox')) {
+                    } else {
+                    }
+            });
+
+            $("input:checkbox[name='checkboxFamily']").change(function() {
+                console.log("checkbox changed .. value : " + $(this).val());
+                //TODO
+            });
+        })
+        ;
+        var target = document.getElementById("searchYear");
+        var good_a = ["지수", "제니", "로제", "리사"];
+        //객체사용
+        for(var x in good_a) { 
+            console.log(x + "=>" + good_a[x]);
+        }
+
+        console.log("===========================");
+        var obj = {a : '가', b : '나', c : '다'};
+        for(var key in obj) {
+            console.log(key, obj[key]);
+        }
+
+        console.log("===========================");
+        for(var y of good_a) {
+            console.log(y);
+        }
+
+        console.log("===========================");
+        good_a.forEach(function(item, index, arr2) {
+            console.log(item, index, arr2[index]);
+        })
+
+        function test() {
+            console.log("===========================");
+
+            var idx = document.getElementById("searchYear").selectedIndex;
+            console.log(idx);
+
+            var tmp = document.getElementById("searchYear").options[idx].value;
+            console.log(tmp);
+
+            tmp = document.getElementById("searchYear").options[idx].text;
+            console.log(tmp);
+
+            tmp = document.getElementById("searchYear").options[idx].index;
+            console.log(tmp);
+
+        }
+
+    </script>
+</head>
+<body>
+    <select name="searchYear" id="searchYear" onchange="">
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+    </select>
+    <br>
+    <button id="btn" onclick="test()">버튼</button>
+    <br>
+    <input type="checkbox" id="box1" name="checkboxFamily"> 
+    <input type="checkbox" id="box2" name="checkboxFamily"> 
+    <input type="checkbox" id="box3" name="checkboxFamily"> 
+    <input type="checkbox" id="box4" name="checkboxFamily">
+    <br>
+    <input type="radio" id="radio1" name="radioFamily" value="S"> 
+    <input type="radio" id="radio2" name="radioFamily" value="H"> 
+    <input type="radio" id="radio3" name="radioFamily" value="K"> 
+</body>
+</html>
